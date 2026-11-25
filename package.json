@@ -1,0 +1,31 @@
+{
+  "name": "eye-viva",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "vite build",
+    "emulators": "firebase emulators:start --only auth,firestore --project demo-eyeviva",
+    "prep:note": "python3 -I scripts/prep_note.py",
+    "test": "vitest run",
+    "test:rules": "firebase emulators:exec --only auth,firestore --project demo-eyeviva \"vitest run --config vitest.rules.config.ts\""
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.170.46",
+    "@tanstack/react-start": "^1.169.7",
+    "firebase": "^12.19.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^5.0.2",
+    "@types/node": "^26.6.7",
+    "@types/react": "^19.3.1",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "firebase-tools": "^15.37.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
